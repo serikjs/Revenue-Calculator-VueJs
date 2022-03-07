@@ -1,0 +1,22 @@
+:root {
+	/*! Font */
+	--main_font: Open Sans;
+	--second_font: 'Gilroy';
+	/*! END Font */
+
+	/*! Color Font */
+	--white_color: #fff;
+	--dark_color: #0c1f31;
+	--light_color: #b4ddf5;
+	/*! END Color Font */
+
+	/*! Main Color */
+	--body_bg_color: linear-gradient(178.53deg, #102741 1.25%, #184c6c 98.7%);
+	--calculator_bg_color: #122a46;
+	--calculator_form_border: #22435b;
+	--calculator_btn_checked: #225c6f;
+	/*! END Main Color */
+
+	--border_radius: 8px;
+	--border_radius_small: 4px;
+}

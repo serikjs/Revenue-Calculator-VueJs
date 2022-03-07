@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+@font-face {
+	font-family: Gilroy;
+	font-weight: light;
+	src: url('./../fonts/Gilroy-Light.ttf') format('opentype');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-weight: regular;
+	src: url('./../fonts/Gilroy-Regular.ttf') format('opentype');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-weight: medium;
+	src: url('./../fonts/Gilroy-Medium.ttf') format('opentype');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-weight: semi_bold;
+	src: url('./../fonts/Gilroy-SemiBold.ttf') format('opentype');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-weight: bold;
+	src: url('./../fonts/Gilroy-Bold.ttf') format('opentype');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-weight: heavy;
+	src: url('./../fonts/Gilroy-Heavy.ttf') format('opentype');
+}
+
+@font-face {
+	font-family: Gilroy;
+	font-weight: extra_bold;
+	src: url('./../fonts/Gilroy-ExtraBold.ttf') format('opentype');
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<section id="calculator" class="calculator-section">
+			<div class="container">
+				<div class="calculator">
+					<div class="calculator-wrapper">
+						<div class="section-header center">
+							<h2 class="section-header--title">Revenue Calculator</h2>
+							<p class="section-header--descr">
+								Get an automatic caculation of your partnership financial profit
+								based on slplit differences between development fares.
+							</p>
+						</div>
+						<div class="calculator-form--wrapper">
+							<form class="calculator-form">
+								<div class="calculator-form--elem">
+									<label for="calc-select">Tech stack</label>
+									<div class="calculator-elem--wrapper">
+										<button
+											type="button"
+											class="select__head stack"
+											@click="open"
+										>
+											Select stack position
+										</button>
+										<ul class="select__list" style="display: none">
+											<template v-for="(item,i) in techStackData">
+												<li
+													class="select__item"
+													:data-value="item.value"
+													:data-junior="item.junior"
+													:data-middle="item.middle"
+													:data-senior="item.senior"
+													@click="selected"
+												>
+													{{ item.title }}
+												</li>
+											</template>
+										</ul>
+									</div>
+								</div>
+
+								<div class="calculator-form--elem">
+									<label for="calc-select">Seniority level</label>
+									<div class="calculator-elem--wrapper button-w">
+										<template v-for="item in seniorityLevelData">
+											<input
+												type="radio"
+												:id="item.id"
+												name="level-inputs"
+												class="time-input"
+												:value="item.value"
+												v-model="seniorityLevel"
+											/>
+											<label :for="item.id"> {{ item.title}}</label>
+										</template>
+									</div>
+								</div>
+
+								<div class="calculator-form--elem">
+									<label for="calc-select">Work time</label>
+									<div class="calculator-elem--wrapper button-w">
+										<template v-for="(item,i) in workTimeData">
+											<input
+												type="radio"
+												:id="item.id"
+												name="time-inputs"
+												class="time-input"
+												:value="item.value"
+												v-model="workTime"
+											/>
+											<label :for="item.id"> {{ item.title}}</label>
+										</template>
+									</div>
+								</div>
+
+								<div class="calculator-form--elem">
+									<label for="calc-select">Currency</label>
+									<div class="calculator-elem--wrapper button-w currency">
+										<template v-for="(item,i) in currencyData">
+											<input
+												type="radio"
+												:id="item.id"
+												name="currency-inputs"
+												class="time-input"
+												:value="item.value"
+												v-model="currency"
+											/>
+											<label :for="item.id">{{ item.title }}</label>
+										</template>
+									</div>
+								</div>
+								<div class="calculator-form--elem">
+									<label for="calc-select">Your rate</label>
+									<div class="calculator-elem--wrapper">
+										<input
+											class="select__head rate"
+											type="text"
+											placeholder="Insert rate amount"
+											v-model="yourRate"
+										/>
+									</div>
+								</div>
+
+								<button class="btn btn-one btn-calculate" @click="calculate">
+									<span>Calculate your savings</span>
+								</button>
+							</form>
+							<div class="calculator-result">
+								<a class="close" @click="closeResult">&times;</a>
+								<b>Total savings:</b>
+								<div class="result-wrapper">
+									<div class="result">{{total}}</div>
+									<div class="result-prosent">%{{totalProsent}}</div>
+								</div>
+
+								<p>
+									Total buget and percentage calculations are based on our
+									rates.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	<script src="main.js"></script>
+</html>
